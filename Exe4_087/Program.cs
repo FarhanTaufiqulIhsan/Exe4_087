@@ -22,6 +22,12 @@ namespace Exe4_087
     {
         private char[] farhan = new char[105];
 
+        Node top;
+
+        public Stack()
+        {
+            top = null;
+        }
         static void Main(string[] args)
         {
         }
