@@ -19,6 +19,13 @@ namespace Exe4_087
             max = size;
         }
 
+        public void push(int item)
+        {
+            if (top == max - 1)
+            {
+                Console.WriteLine("Stack overflow");
+            }
+        }
         
         static void Main(string[] args)
         {
