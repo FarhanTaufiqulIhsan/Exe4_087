@@ -27,6 +27,14 @@ namespace Exe4_087
         {
             top = null;
         }
+
+        bool empty()
+        {
+            if (top == null)
+                return false;
+            else
+                return true;
+        }
         static void Main(string[] args)
         {
         }
