@@ -6,32 +6,27 @@ using System.Threading.Tasks;
 
 namespace Exe4_087
 {
-    
+    class Node
+    {
+        public int info;
+        public Node next;
+        public Node(int i, Node n)
+        {
+            info = i;
+            next = n;
+        }
+    }
+
     class Stack
     {
-        private char[] farhan = new char[105];
-        private char top;
-        private char max;
-        public Stack(char size)
-        {
-            farhan = new char[size];
-            top = -1;
-            max = size;
-        }
+        private int[] farhan = new int[105];
 
-        public void push(char item)
+        Node top;
+
+        public Stack()
         {
-            if (top == max - 1)
-            {
-                Console.WriteLine("Stack overflow");
-                return;
-            }
-            else
-            {
-                farhan[++top] = item;
-            }
+            top = null;
         }
-        
         static void Main(string[] args)
         {
         }
