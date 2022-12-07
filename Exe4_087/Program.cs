@@ -35,6 +35,16 @@ namespace Exe4_087
             else
                 return true;
         }
+
+        public void push(int element)
+        {
+            Node fresh;
+            fresh = new Node(element, null);
+
+            fresh.next = top;
+            top = fresh;
+            Console.WriteLine("\n" + element + " pushed.");
+        }
         static void Main(string[] args)
         {
         }
