@@ -41,8 +41,8 @@ namespace Exe4_087
             }
             else
             {
-                Console.WriteLine("Poped element is: " + ele[top]);
-                return ele[top--];
+                Console.WriteLine("Poped element is: " + farhan[top]);
+                return farhan[top--];
             }
         }
 
@@ -57,7 +57,7 @@ namespace Exe4_087
             {
                 for (int i = 0; i <= top; i++)
                 {
-                    Console.WriteLine("Item[" + (i + 1) + "]: " + ele[i]);
+                    Console.WriteLine("Item[" + (i + 1) + "]: " + farhan[i]);
                 }
             }
         }
