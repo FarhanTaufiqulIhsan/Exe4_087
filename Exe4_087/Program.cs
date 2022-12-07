@@ -10,8 +10,12 @@ namespace Exe4_087
     {
         public char info;
         public Node next;
+        public Node(char i, Node n)
+        {
+            info = i;
+            next = n;
+        }
 
-        
     }
 
     class Stack
