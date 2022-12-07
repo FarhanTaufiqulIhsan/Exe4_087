@@ -6,53 +6,81 @@ using System.Threading.Tasks;
 
 namespace Exe4_087
 {
-    class Node
+   
+    class Stack
     {
-        public int info;
-        public Node next;
-        public Node(int i, Node n)
+        private int[] farhan;
+        private int top;
+        private int max;
+        public Stack(int size)
         {
-            info = i;
-            next = n;
+            farhan = new int[size];
+            top = -1;
+            max = size;
+        }
+
+        public void push(int item)
+        {
+            if (top == max - 1)
+            {
+                Console.WriteLine("Stack Overflow");
+                return;
+            }
+            else
+            {
+                farhan[++top] = item;
+            }
+        }
+
+        public int pop()
+        {
+            if (top == -1)
+            {
+                Console.WriteLine("Stack Underflow");
+                return -1;
+            }
+            else
+            {
+                Console.WriteLine("Poped element is: " + ele[top]);
+                return ele[top--];
+            }
+        }
+
+        public void printStack()
+        {
+            if (top == -1)
+            {
+                Console.WriteLine("Stack is Empty");
+                return;
+            }
+            else
+            {
+                for (int i = 0; i <= top; i++)
+                {
+                    Console.WriteLine("Item[" + (i + 1) + "]: " + ele[i]);
+                }
+            }
         }
     }
 
-    class Stack
+    class Program
     {
-        private int[] farhan = new int[105];
-
-        Node top;
-
-        public Stack()
+        static void Main()
         {
-            top = null;
-        }
+            Stack S = new Stack(5);
 
-        bool empty()
-        {
-            if (top == null)
-                return false;
-            else
-                return true;
-        }
+            S.push(10);
+            S.push(20);
+            S.push(30);
+            S.push(40);
+            S.push(50);
 
-        public void push(int element)
-        {
-            Node fresh;
-            fresh = new Node(element, null);
+            Console.WriteLine("Items are : ");
+            S.printStack();
 
-            fresh.next = top;
-            top = fresh;
-            Console.WriteLine("\n" + element + " pushed.");
-        }
-
-        public void pop()
-        {
-            Console.WriteLine("\nThe popped element is:" + top.info);
-            top = top.next; 
-        }
-        static void Main(string[] args)
-        {
+            S.pop();
+            S.pop();
+            S.pop();
         }
     }
 }
