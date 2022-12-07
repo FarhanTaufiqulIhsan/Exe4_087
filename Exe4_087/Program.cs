@@ -20,7 +20,8 @@ namespace Exe4_087
 
     class Stack
     {
-       
+        private char[] farhan = new char[105];
+
         static void Main(string[] args)
         {
         }
