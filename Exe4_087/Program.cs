@@ -19,11 +19,16 @@ namespace Exe4_087
             max = size;
         }
 
-        public void push(int item)
+        public void push(char item)
         {
             if (top == max - 1)
             {
                 Console.WriteLine("Stack overflow");
+                return;
+            }
+            else
+            {
+                farhan[++top] = item;
             }
         }
         
